@@ -10,10 +10,10 @@ services:
     ports: 
       - "80:80"
       - "443:443"
-  video:
-    image: byappt/video 
-    container_name: byappt_video
-    env_file: /usr/local/etc/byappt/twilio.env
+  hosts:
+    image: broker 
+    container_name: brokerinstance
+    #env_file: /usr/local/etc/byappt/twilio.env
     expose: 
-      - "3001"
+      - "3010"
   
